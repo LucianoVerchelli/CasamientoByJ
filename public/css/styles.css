@@ -255,6 +255,7 @@ color: var(--rosa);
   font-size: 4.5rem;
   /* text-transform: capitalize; */
   margin-bottom: 15px;
+  text-align: center;
 }
 .about-txt h5{
   color: var(--dorado);
@@ -262,6 +263,7 @@ color: var(--rosa);
 text-transform: capitalize;
 margin-bottom: 25px;
 letter-spacing: 2px;
+text-align: center;
 }
 .about-txt p{
   color: rgb(128, 128, 128);
@@ -292,6 +294,10 @@ letter-spacing: 2px;
     width: 320px;
     border-radius: 10px;
   }
+  .about-txt h1{
+    font-size: 40px;
+    padding-top: 50px;
+  }
 }
 
 @media screen and (min-width:768px){
@@ -301,6 +307,7 @@ letter-spacing: 2px;
     white-space: normal;
     width: 75ch;
   }
+
 }
 /* ----------------------------------------NOSOTROS FINAL------------------------------------------ */
 
@@ -340,6 +347,7 @@ height: 100%;
   display: flex;
   width: 45%;
 margin: 30px 0;
+border-radius: 20px;
 }
  .card .imgBx {
   position: absolute;
@@ -354,6 +362,7 @@ margin: 30px 0;
   align-items: center;
   overflow: hidden;
   transition: 0.3s ease-in-out;
+  border-radius: 20px;
 
 }
 .card:hover .imgBx{
