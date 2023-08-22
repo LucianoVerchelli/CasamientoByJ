@@ -124,11 +124,22 @@ carrusel.addEventListener("mouseleave", dragStop);
 
 
 /// asistencia 
-function crearEnlace() {
-  var nombre = document.getElementById("nombre").value;
-  var asistencia = document.getElementById("asistencia").value;
+const formAsist = document.getElementById("formAsist")
 
-  var mensaje = "";
+formAsist.addEventListener("submit", ()=>{
+
+
+
+
+
+
+ 
+  const nombre = document.getElementById("nombre").value;
+  const asistencia = document.querySelector("select[name=asistencia]").value;
+
+  
+
+  let mensaje = "";
 
   if (asistencia === "si") {
     mensaje = "Hola, mi nombre es " + nombre + " y asistiré al evento. ¡Nos vemos allí!";
@@ -138,21 +149,26 @@ function crearEnlace() {
     mensaje = "Hola, mi nombre es " + nombre + " y todavía no estoy seguro si podré asistir o no. ¡Hablemos pronto!";
   }
 else if (asistencia === "ninguna") {
-    mensaje = "Hola, mi nombre es " + nombre + "...";
+    mensaje = "Hola, mi nombre es " + nombre + 
+    
+    "";
   }
 
-  var telefono = "541135594588";
-  var url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+let  telefono = "541139260600";
+let  url = "https://wa.me/" + telefono + "?text=" + mensaje;
+window.open(url, "_blank");
+});
 
-  var boton = document.createElement("button");
-  boton.innerHTML = "Enviar mensaje a WhatsApp";
-  boton.addEventListener("click", function() {
-    window.open(url, "_blank");
-  });
+function crearEnlace(){
 
-  var divBoton = document.getElementById("boton-whatsapp");
-  divBoton.innerHTML = "";
-  divBoton.appendChild(boton);
+const boton = document.createElement("button");
+boton.innerHTML = "Enviar mensaje a WhatsApp";
+boton.setAttribute("type", "submit");
+
+const divBoton = document.getElementById("boton-whatsapp");
+divBoton.innerHTML = "";
+divBoton.appendChild(boton);
 }
 
-document.getElementById("asistencia").addEventListener("change", crearEnlace); 
+document.getElementById("asistencia").addEventListener("change", crearEnlace);
+
