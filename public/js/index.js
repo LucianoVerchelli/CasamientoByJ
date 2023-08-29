@@ -133,20 +133,20 @@ formAsist.addEventListener("submit", ()=>{
 
 
 
- 
+ // traigo los inputs con sus respectivos values 
   const nombre = document.getElementById("nombre").value;
   const asistencia = document.querySelector("select[name=asistencia]").value;
 
   
-
+// guardo el mensaje en un array vacio que se va a cambiar dependiendo el value del option.
   let mensaje = "";
 
   if (asistencia === "si") {
-    mensaje = "Hola, mi nombre es " + nombre + " y asistiré al evento. ¡Nos vemos allí!";
+    mensaje = "Hola, mi nombre es " + nombre + " y asistiré al casamiento. ¡Nos vemos allí!";
   } else if (asistencia === "no") {
-    mensaje = "Hola, mi nombre es " + nombre + " y no podré asistir al evento. ¡Espero verlos la próxima vez!";
+    mensaje = "Hola, mi nombre es " + nombre + " y no podré asistir al casamiento. ¡Mil Disculpas!";
   } else if (asistencia === "no estoy seguro") {
-    mensaje = "Hola, mi nombre es " + nombre + " y todavía no estoy seguro si podré asistir o no. ¡Hablemos pronto!";
+    mensaje = "Hola, mi nombre es " + nombre + " y todavía no estoy seguro si podré asistir al casamiento o no. ¡Hablemos pronto!";
   }
 else if (asistencia === "ninguna") {
     mensaje = "Hola, mi nombre es " + nombre + 
@@ -154,13 +154,16 @@ else if (asistencia === "ninguna") {
     "";
   }
 
+  //telefono al cual le van a llegar los mensajes 
 let  telefono = "541139260600";
+//api WhatsApp, le hago llegar el telefono y el mensaje dependiendo que option toco
 let  url = "https://wa.me/" + telefono + "?text=" + mensaje;
 window.open(url, "_blank");
 });
 
+//creo el enlace 
 function crearEnlace(){
-
+//hago aparecer el button cuando se marca una opción, dando pie a que no lo manden vacio.
 const boton = document.createElement("button");
 boton.innerHTML = "Enviar mensaje a WhatsApp";
 boton.setAttribute("type", "submit");

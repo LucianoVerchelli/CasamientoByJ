@@ -34,13 +34,17 @@ header{
   padding: 20px 100px;
   background: var(--rosa-oscuro);
 }
+header .logo-brai{
+  width: 50%;
+  height: 50%;
+}
 header .byj {
   color: #fff; 
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
-  text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
+  font-family: 'Parisienne', cursive;
 }
 header .menu{
 position: relative;
@@ -57,6 +61,7 @@ header .menu a{
   padding: 0 15px;
   border-radius: 20px;
   transition: 0.4s ease;
+  
 }
 
 header .menu a:hover{
@@ -82,7 +87,7 @@ header .btn{
 }
 header .byj {
   color: #fff;
-  font-size: 10px; 
+  font-size: 1rem; 
   width: 100%;
   padding-right: 50px;
 }
@@ -124,7 +129,7 @@ padding: 0 15px;
 
 #inicio{
   height: calc((100vh) + 450px);
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./public/img/fondo-casamiento.jpg);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/fondo-casamiento.jpg);
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
@@ -185,7 +190,7 @@ background-color: var(--rosa);
   padding-top: 10px;
   color: var(--dorado);
   border-top: solid 10px var(--dorado);
-  border-bottom: solid 10px var(--dorado);
+ 
 }
 #contador h1{
   font-family: 'Parisienne', cursive;
@@ -234,7 +239,10 @@ padding-top: 20px;
 color: var(--rosa);
 /* font-family: 'Parisienne', cursive; */
 }
-
+ .separador img{
+width: 100%;
+object-fit: cover;
+}
 
 /* ------------------------------------contador final ----------------------------- */
 
@@ -279,6 +287,11 @@ text-align: center;
   align-items: center;
   justify-content: space-around;
 }
+#nosotros .separador img{
+  width: 100%;
+  object-fit: cover;
+  }
+
 /* media querys  */
 @media screen and (max-width:1100px){
   .about-main{
@@ -288,7 +301,7 @@ text-align: center;
     text-align: center;
     justify-content: space-around;
   }
-  #nosotros img{
+  #nosotros > img{
     height: 400px;
     background-size: cover;
     width: 320px;
@@ -298,6 +311,11 @@ text-align: center;
     font-size: 40px;
     padding-top: 50px;
   }
+  #nosotros .separador img{
+  width: 100%;
+  object-fit: cover;
+  }
+  
 }
 
 @media screen and (min-width:768px){
@@ -307,7 +325,6 @@ text-align: center;
     white-space: normal;
     width: 75ch;
   }
-
 }
 /* ----------------------------------------NOSOTROS FINAL------------------------------------------ */
 
@@ -504,11 +521,17 @@ scroll-behavior: smooth;
 
 .carrusel img{
   height: 400px;
+  width: 400px;
   padding: 2px;
   object-fit: cover;
+  object-position: center;
   width: calc(100% / 3);
+  filter: grayscale(100%);
 }
+.carrusel .hija-de-puta  {
+ object-position: top;
 
+}
 
 .carrusel img:first-child{
   margin-left: 0px;
@@ -614,6 +637,7 @@ width: 35ch;
 #asistencia{
   width: 100%;
   background: var(--rosa);
+ height: 100%;
 }
 .asist{
   text-align: center;
@@ -629,7 +653,7 @@ form{
   flex-direction: column;
   align-items: center;
   gap: 20px;
-padding-bottom: 40px;
+padding-bottom: 100px;
 }
 form input{
   width: 50%;
@@ -686,5 +710,84 @@ button {
 }
 
 
-
 /* asistencia final  */
+footer{
+  background: var(--rosa-oscuro);
+  height: auto;
+  width: 100%;
+  font-family: 'poppins', sans-serif;
+  padding-top: 40px;
+  color: black;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  font-size: 2.2rem;
+
+  font-weight: bold;
+  /* text-transform: capitalize; */
+  font-family: 'Parisienne', cursive;
+  color: rgb(250, 118, 118);
+  line-height: 3rem;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 5px auto;
+  line-height: 28px;
+  font-size: 16px;
+}
+.footer-content p i{
+  color:rgb(250, 118, 118)
+}
+.redes{
+  list-style: none;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+.redes i{
+  margin: 0 10px;
+
+}
+.redes a{
+  text-decoration: none;
+  color: rgb(250, 118, 118);
+}
+.redes a i{
+  font-size: 2.5rem;
+  transition: 0.5s ease;
+}
+.redes a:hover i{
+  color: black;
+
+}
+.footer-bottom{
+  background-color:var(--rosa-oscuro);
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+  
+}
+
+
+
+
+
+
