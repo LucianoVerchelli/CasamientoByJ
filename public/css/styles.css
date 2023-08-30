@@ -301,17 +301,18 @@ text-align: center;
     text-align: center;
     justify-content: space-around;
   }
-  #nosotros > img{
-    height: 400px;
+  #nosotros img{
+    height: auto;
     background-size: cover;
-    width: 320px;
+width: 100%;
     border-radius: 10px;
+    padding-left: 10px;
   }
   .about-txt h1{
     font-size: 40px;
     padding-top: 50px;
   }
-  #nosotros .separador img{
+  #nosotros .separador .flores2{
   width: 100%;
   object-fit: cover;
   }
