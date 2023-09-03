@@ -155,7 +155,7 @@ else if (asistencia === "ninguna") {
   }
 
   //telefono al cual le van a llegar los mensajes 
-let  telefono = "541139260600";
+let  telefono = "541122800910";
 //api WhatsApp, le hago llegar el telefono y el mensaje dependiendo que option toco
 let  url = "https://wa.me/" + telefono + "?text=" + mensaje;
 window.open(url, "_blank");
