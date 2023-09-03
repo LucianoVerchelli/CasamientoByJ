@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/css/styles.css" />
     <link
@@ -51,7 +52,7 @@
 
       <!-- contador inicio-->
       <section id="contador">
-        <h1>Faltan</h1>
+        <h1>Nos casamos el 3 de Noviembre</h1>
         <div class="container-contador">
           <div>
             <p id="days">00</p>
@@ -83,15 +84,15 @@
         <div class="about-main">
           <img src="./public/img/fotos-3.jpg" alt="nosotros" />
           <div class="about-txt">
-            <h1>Nuestra historia</h1>
+            <h1>Nuestra Historia</h1>
             <h5>Julieta y Braian</h5>
             <p>
               En un rincón especial de nuestros corazones, nuestra historia de
               amor floreció. Como un viaje mágico, se tejió
               con risas, complicidad y momentos inolvidables. Cada paso nos
               llevó a este día, donde unimos nuestras vidas en matrimonio, como símbolo
-              de nuestra fuerza conexión y la promesa de un futuro lleno de
-              amor y aventuras compartidas. <i class="fa-solid fa-heart"></i>.
+              de nuestra fuerza, conexión y la promesa de un futuro lleno de
+              amor y aventuras compartidas<i class="fa-solid fa-heart"></i>.
             </p>
           </div>
         </div>
@@ -116,7 +117,7 @@
               draggable="false"
             />
             <img
-              src="./public/img/fotos-carrusel/test2-about.jpg"
+              src="./public/img/fotos-carrusel/foto-3.jpg"
               alt=""
               draggable="false"
             />
@@ -142,7 +143,7 @@
               draggable="false"
             />
             <img
-              src="./public/img/fondo-casamiento.jpg"
+              src="./public/img/fotos-carrusel/foto-8.png"
               alt=""
               draggable="false"
             />
@@ -154,6 +155,7 @@
 
       <!-- /* -------------------------------------informacio inicio------------------------------------- */ -->
       <h1 class="inf">Información</h1>
+      <h3 class="importante">*Tocando las cartas, vas a poder ver toda la infomación.*</h3>
       <section id="informacion">
         <div class="contenedor">
           <div class="card">
@@ -164,11 +166,11 @@
               <div>
                 <h3>Ubicación</h3>
                 <p>
-                  -Lorem ipsum dolor sit amet. <br />
-                  -Lorem ipsum dolor sit amet. <br />
-                  -Lorem ipsum dolor sit amet.
+                  <strong>Calle:</strong> Santiago Del Estero, 185. <br />
+                  <strong>Ubicado:</strong> Esquina Sta. Fe. <br />
+                 
                 </p>
-                <a href="https://goo.gl/maps/ivn3KUuKMQSu92pA9" target="_blank">¿Ver en maps?</a>
+                <a href="https://goo.gl/maps/ivn3KUuKMQSu92pA9" target="_blank">Ver en Maps</a>
               </div>
             </div>
           </div>
@@ -188,9 +190,8 @@
               <div>
                 <h3>Fecha/Horario</h3>
                 <p>
-                  Dia: Lorem. <br />
-                  Fecha: Lorem. <br />
-                  Horario: Lorem.
+                  <strong>Dia:</strong> Viernes 3 de Noviembre. <br />
+                  <strong>Horario:</strong> 21:00Hs.
                 </p>
               </div>
             </div>
@@ -214,13 +215,25 @@
             <p class="sub-sub-title">
               Podés colaborar depositando en nuestra cuenta bancaria
             </p>
-            <a href="" class="boton-regalo">CBU</a>
+            <button onclick="cbu()">CBU</button>
+            <script>
+
+              function cbu (){
+                swal({
+  title: "¡Nuestra Cuenta!",
+  text: "Nombre: Braian Aranda German" + "  \n CVU: 0000003100081456728267" + " \n Alias: BraiGerman",
+  icon: "success",
+  button: "Continuar",
+});
+ }
+            </script>
           </div>
         </div>
       </section>
       <!-- /* -------------------------------------regalo final------------------------------------- */ -->
       <!-- asistencia inicio -->
       <h1 class="asist">Asistencia</h1>
+
       <section id="asistencia">
         <form id="formAsist" onsubmit="return false;">
           <label for="nombre">Nombre y apellido:</label>

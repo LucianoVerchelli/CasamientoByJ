@@ -129,12 +129,13 @@ padding: 0 15px;
 
 #inicio{
   height: calc((100vh) + 450px);
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/fondo-casamiento.jpg);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/fondo-casamiento.jpg);
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
   backdrop-filter: blur(100px);
 background-color: #363532ef;
+margin-top: 80px;
 }
 #inicio h1{
   display: flex;
@@ -167,7 +168,6 @@ background-color: #363532ef;
   line-height: 35px;
   text-align: center;
   margin-bottom: 0;
-  padding-top: 100px;
 }
 
 @media screen and (max-width:768px){
@@ -176,6 +176,10 @@ background-color: #363532ef;
   }
   #inicio .frase-portada{
     font-size: 20px;
+  }
+  #inicio{
+    height: calc((100vh) + 100px);
+  margin-top: 30px;
   }
 }
 
@@ -195,7 +199,7 @@ background-color: var(--rosa);
 #contador h1{
   font-family: 'Parisienne', cursive;
   font-weight: bold;
-  color: black;
+  color: var(--dorado);
   text-align: center;
  padding-top: 30px;
  font-size: 50px;
@@ -244,13 +248,17 @@ width: 100%;
 object-fit: cover;
 }
 
+@media screen and (max-width:768px){
+  #contador h1{
+   font-size: 40px;
+  }
+}
 /* ------------------------------------contador final ----------------------------- */
 
 
 /* ----------------------------------------NOSOTROS INICIO------------------------------------------ */
 #nosotros{
   width: 100%;
-  padding: 120px 0px;
   background-color: var(--rosa);
 }
 #nosotros img{
@@ -259,14 +267,15 @@ object-fit: cover;
   border-radius: 10px;
 }
 .about-txt h1 {
-  color: #f79d97;
-  font-size: 4.5rem;
+  color: var(--dorado);
+  font-size: 5rem;
   /* text-transform: capitalize; */
+  font-family: 'Parisienne', cursive;
   margin-bottom: 15px;
   text-align: center;
 }
 .about-txt h5{
-  color: var(--dorado);
+  color: var(--rosa-oscuro);
   font-size: 20px;
 text-transform: capitalize;
 margin-bottom: 25px;
@@ -306,10 +315,9 @@ text-align: center;
     background-size: cover;
 width: 100%;
     border-radius: 10px;
-    padding-left: 10px;
   }
   .about-txt h1{
-    font-size: 40px;
+    font-size: 50px;
     padding-top: 50px;
   }
   #nosotros .separador .flores2{
@@ -425,6 +433,11 @@ border-radius: 20px;
   color: #fff;
 
 }
+.importante{
+  text-align: center;
+  color:var(--rosa-oscuro);
+  background-color: var(--rosa);
+}
 
 @media only screen and (max-width:991px){
   .contenedor{
@@ -497,6 +510,7 @@ box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.2);
 #fotos .wrapper i:first-child{
   left: -23px;
 display: none;
+z-index: 999;
 }
 #fotos .wrapper i:last-child{
   right: -23px;
@@ -591,6 +605,7 @@ font-family: 'Parisienne', cursive;
   font-family: "poppins", sans-serif;
   font-weight: bold;
   text-align: center;
+  padding-bottom: 15px;
 }
 #regalo .box-regalo .boton-regalo {
   background: white;
@@ -792,3 +807,6 @@ footer{
 
 
 
+.fa-solid{
+  color: var(--rosa-oscuro)
+}
