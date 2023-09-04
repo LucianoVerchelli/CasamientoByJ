@@ -233,14 +233,14 @@
       <!-- /* -------------------------------------regalo final------------------------------------- */ -->
       <!-- asistencia inicio -->
       <h1 class="asist">Asistencia</h1>
-
+<p class="importante">*Rellenar el campo con tu Nombre Completo y Elegir una opción en asistencia* </p>
       <section id="asistencia">
         <form id="formAsist" onsubmit="return false;">
-          <label for="nombre">Nombre y apellido:</label>
-          <input type="text" id="nombre" name="nombre" />
+          <label for="nombre" >Nombre y apellido:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Completar aqui"/>
           <label for="asistencia">¿Asistirás al evento?</label>
           <select id="asistencia" name="asistencia">
-            <option value="ninguna" selected>Seleccione</option>
+            <option value="ninguna" disabled selected hidden>Seleccione</option>
 
             <option value="si">Sí, ¡voy a asistir al casamiento!.</option>
             <option value="no">No, no puedo.</option>
