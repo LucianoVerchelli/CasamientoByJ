@@ -294,6 +294,7 @@ object-fit: cover;
 .about-txt h5{
   color: var(--rosa-oscuro);
   font-size: 20px;
+  font-weight: bold;
 text-transform: capitalize;
 margin-bottom: 25px;
 letter-spacing: 2px;
